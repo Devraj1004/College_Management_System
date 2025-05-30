@@ -3,7 +3,7 @@
 Welcome to the official **static clone** of the Guru Nanak Institutions website — beautifully rebuilt using only **HTML**, **CSS**, and **Netlify Forms** for submission handling. This is a clean, modern, and responsive website that gives a seamless user experience across devices.
 
 <p align="center">
-  <img src="https://www.gniindia.org/gnitc/assets/images/logo.png" alt="GNITC Logo" height="80">
+  <img src="logo.png" alt="GNITC Logo" height="80">
 </p>
 
 ---
