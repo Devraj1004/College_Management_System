@@ -163,8 +163,8 @@
   <!-- APPLICATION FORM -->
   <div class="form-container">
     <h2>Application Form</h2>
-    <form name="application" method="POST" data-netlify="true" enctype="multipart/form-data" action="thank_you.html">
-  <input type="hidden" name="form-name" value="apply">
+<form name="application" method="POST" data-netlify="true" enctype="multipart/form-data">
+  <input type="hidden" name="form-name" value="application">
 
   <!-- Personal Details -->
   <label for="fullname">Full Name</label>
@@ -227,7 +227,6 @@
 
   <button type="submit">Submit Application</button>
 </form>
-
   </div>
 
   <!-- FOOTER -->
@@ -235,5 +234,19 @@
     &copy; 2025 Guru Nanak Institutions | info@gniindia.org | +91-8885552525
   </footer>
 
+  <!-- ✅ Netlify Redirect Script -->
+  <script>
+    const form = document.forms["application"];
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      fetch("/", {
+        method: "POST",
+        body: data,
+      })
+      .then(() => window.location.href = "thank_you.html")
+      .catch((error) => alert("Form submission failed!"));
+    });
+  </script>
 </body>
 </html>
