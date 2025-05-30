@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply Now - GNITC</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #0a2558;
+      color: #fff;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-left img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .navbar-left span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      color: #ffd700;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #007BFF, #6610f2);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    /* FORM SECTION */
+    .form-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #0a2558;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+
+    input, select {
+      padding: 0.8rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="file"] {
+      padding: 0.4rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.8rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0a2558;
+      color: #fff;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .form-container {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="logo.jpeg" alt="GNITC Logo">
+      <span>Guru Nanak Institutions</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="departments.html">Departments</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Apply Now</h1>
+    <p>Join GNITC and shape your future with us</p>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <div class="form-container">
+    <h2>Application Form</h2>
+    <form name="application" method="POST" data-netlify="true" enctype="multipart/form-data" action="thank_you.html">
+  <input type="hidden" name="form-name" value="apply">
+
+  <!-- Personal Details -->
+  <label for="fullname">Full Name</label>
+  <input type="text" id="fullname" name="fullname" required>
+
+  <label for="dob">Date of Birth</label>
+  <input type="date" id="dob" name="dob" required>
+
+  <label for="gender">Gender</label>
+  <select id="gender" name="gender" required>
+    <option value="" disabled selected>Select</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="mobile">Mobile Number</label>
+  <input type="tel" id="mobile" name="mobile" required>
+
+  <label for="address">Address</label>
+  <input type="text" id="address" name="address" required>
+
+  <!-- Academic Details -->
+  <label for="tenth">10th Grade Percentage</label>
+  <input type="number" id="tenth" name="tenth" step="0.01" required>
+
+  <label for="twelfth">12th Grade Percentage</label>
+  <input type="number" id="twelfth" name="twelfth" step="0.01" required>
+
+  <label for="eamcet">EAMCET Rank</label>
+  <input type="number" id="eamcet" name="eamcet" required>
+
+  <label for="branch">Preferred Branch</label>
+  <select id="branch" name="branch" required>
+    <option value="" disabled selected>Select</option>
+    <option value="cse">Computer Science & Engineering (CSE)</option>
+    <option value="it">Information Technology (IT)</option>
+    <option value="ece">Electronics & Communication Engineering (ECE)</option>
+    <option value="mech">Mechanical Engineering</option>
+  </select>
+
+  <!-- Uploads -->
+  <label for="photo">Upload Photo</label>
+  <input type="file" id="photo" name="photo" accept="image/*" required>
+
+  <label for="signature">Upload Signature</label>
+  <input type="file" id="signature" name="signature" accept="image/*" required>
+
+  <label for="tenth_marksheet">Upload 10th Marksheet</label>
+  <input type="file" id="tenth_marksheet" name="tenth_marksheet" accept=".pdf,.jpg,.png" required>
+
+  <label for="twelfth_marksheet">Upload 12th Marksheet</label>
+  <input type="file" id="twelfth_marksheet" name="twelfth_marksheet" accept=".pdf,.jpg,.png" required>
+
+  <label for="eamcet_rankcard">Upload EAMCET Rank Card</label>
+  <input type="file" id="eamcet_rankcard" name="eamcet_rankcard" accept=".pdf,.jpg,.png" required>
+
+  <button type="submit">Submit Application</button>
+</form>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy; 2025 Guru Nanak Institutions | info@gniindia.org | +91-8885552525
+  </footer>
+
+</body>
+</html>

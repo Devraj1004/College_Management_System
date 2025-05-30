@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GNITC - Guru Nanak Institute of Technology</title>
+  <link rel="shortcut icon" href="https://www.gniindia.org/assets/images/favicon.png" type="image/x-icon">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Navbar ===== */
+    .navbar {
+      background-color: #0a2558;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      flex-wrap: wrap;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .navbar-left img {
+      height: 50px;
+    }
+
+    .navbar-left span {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffc107;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      position: relative;
+      height: 80vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('bg_image.avif') no-repeat center center/cover;
+      opacity: 0.18;
+      z-index: 1;
+    }
+
+    .hero h1, .hero p {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    /* ===== About Section ===== */
+    .about {
+      padding: 3rem 2rem;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      color: #0a2558;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    /* ===== Departments Section ===== */
+    .departments {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .departments h2 {
+      font-size: 2rem;
+      color: #0a2558;
+      margin-bottom: 2rem;
+    }
+
+    .dept-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 1rem;
+      width: 250px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #0a2558;
+    }
+
+    /* ===== Call to Action ===== */
+    .cta {
+      padding: 2rem;
+      background-color: #0a2558;
+      color: white;
+      text-align: center;
+    }
+
+    .cta a {
+      background-color: #ffc107;
+      padding: 0.7rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .cta a:hover {
+      background-color: #e0a800;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background-color: #0a2558;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    .footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .dept-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar-left {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="index.html">
+        <img src="logo.jpeg" alt="GNITC Logo">
+      </a>
+      <span>Guru Nanak Institutions Technical Campus</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="department.html">Department</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <h1>Guru Nanak Institutions Technical Campus</h1>
+    <p>A Premier Institution for Engineering & Technology in Hyderabad</p>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about">
+    <h2>About GNITC</h2>
+    <p>GNITC is one of the top engineering colleges in Telangana. With world-class infrastructure and highly qualified faculty, we aim to create the future leaders of technology and innovation. Find out more about us in the "About" section!</p>
+  </section>
+
+  <!-- ===== DEPARTMENTS SECTION ===== -->
+  <section class="departments">
+    <h2>Departments</h2>
+    <div class="dept-cards">
+      <div class="card">
+        <img src="cse.png" alt="CSE">
+        <h3>Computer Science & Engineering</h3>
+      </div>
+      <div class="card">
+        <img src="it.jpg" alt="IT">
+        <h3>Information Technology</h3>
+      </div>
+      <div class="card">
+        <img src="ece.jpg" alt="ECE">
+        <h3>Electronics & Communication</h3>
+      </div>
+      <div class="card">
+        <img src="mech.jpg" alt="Mechanical">
+        <h3>Mechanical Engineering</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CALL TO ACTION ===== -->
+  <section class="cta">
+    <h2>Ready to join GNITC?</h2>
+    <a href="apply.html">Apply Now</a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; 2025 Guru Nanak Institute of Technology</p>
+    <p>Email: info@gniindia.org | Phone: +91-8885552525</p>
+  </footer>
+
+</body>
+</html>

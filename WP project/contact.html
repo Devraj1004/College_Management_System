@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - GNITC</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #0a2558;
+      color: #fff;
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-left img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .navbar-left span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      color: #ffd700;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #007BFF, #6610f2);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+
+    /* CONTACT SECTION */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+      gap: 2rem;
+    }
+
+    .contact-info, .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      flex: 1 1 45%;
+    }
+
+    .contact-info h2, .contact-form h2 {
+      color: #0a2558;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+      line-height: 1.6;
+      margin: 0.5rem 0;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 0.8rem;
+      margin: 0.5rem 0 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      padding: 0.8rem;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #0056b3;
+    }
+
+    /* MAP */
+    .map {
+      margin: 2rem auto;
+      max-width: 90%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0a2558;
+      color: #fff;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="logo.jpeg" alt="GNITC Logo">
+      <span>Guru Nanak Institutions</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We’re here to help you with your queries and admissions</p>
+  </section>
+
+  <!-- CONTACT INFO & FORM -->
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>Address:</strong> Guru Nanak Institutions, Ibrahimpatnam, Hyderabad, Telangana</p>
+      <p><strong>Phone:</strong> +91-8885552525</p>
+      <p><strong>Email:</strong> info@gniindia.org</p>
+      <p><strong>Working Hours:</strong> Mon - Sat, 9:00AM - 5:00PM</p>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+<form name="contact" method="POST" data-netlify="true" action="thank_you.html">
+  <input type="hidden" name="form-name" value="contact">
+  
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  
+  <button type="submit">Submit</button>
+</form>
+
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div class="map">
+    <iframe src="https://www.google.com/maps?q=Guru+Nanak+Institutions+Hyderabad&output=embed" allowfullscreen></iframe>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    &copy; 2025 Guru Nanak Institutions | info@gniindia.org | +91-8885552525
+  </footer>
+
+</body>
+</html>
