@@ -6,7 +6,7 @@ Welcome to the official **static clone** of the Guru Nanak Institutions website 
 
 ## 🚀 Live Demo
 
-👉 [Visit the Live Website](https://your-netlify-link.netlify.app)  
+👉 [Visit the Live Website](https://gnitcwp.netlify.app/)  
 ✅ Hosted using **Netlify** | 🔗 Source Code: Available here on **GitHub**
 
 ---
